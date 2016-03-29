@@ -11,7 +11,11 @@ $('.btn-collapse-expand').on('click', function () {
 });
 
 $('.btn-bounce').on('click', function () {
-  $('.circle').toggleClass('bounces');
+  $('.circle').addClass('bounces');
+});
+
+$('.circle').on('animationend', function () {
+  $('this').removeClass('bounces');
 });
 
 $('.btn-append').on('click', function () {
